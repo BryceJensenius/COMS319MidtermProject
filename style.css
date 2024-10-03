@@ -1,0 +1,122 @@
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Baskerville;
+    color: #ffffff;
+    border: 5px double #413d3d;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+img {
+    max-width: 925px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-element {
+    text-decoration: none;
+    font-family: Baskerville;
+    font-size: 13px;
+    color: #dcdcdc;
+    border: 2px solid #8f8e8e;
+    padding: 9px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; /* Increased padding */
+    margin-bottom: 20px;
+}
+
+footer p {
+    text-decoration: none;
+    font-family: Baskerville;
+    color: #e0e0e0;
+    padding: 2px;
+    font-weight: 500;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; /* Increased padding */
+    margin-bottom: 20px;
+}
+
+.contacts {
+    text-align: center;
+    text-decoration: none;
+    font-family: Baskerville;
+    color: #000000;
+    border: 5px double #413d3d;
+    padding: 5px;
+    font-weight: 600;
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 250px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.contactFlex {
+    text-align: center;
+    text-decoration: none;
+    font-family: Baskerville;
+    color: #000000;
+    border: 5px double #413d3d;
+    padding: 10px;
+    font-weight: 600;
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 450px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+}
+
+.separator {
+    border-right: 1px solid #d6d6d6;
+    transform: translateX(-600%);
+}
+
+.title-heading {
+    font-family: 'Exo 2', sans-serif; /* Replace with your chosen techy font */
+    font-size: 1em; /* Adjust size as needed */
+    color: #5A9BD5; /* Soft Blue color */
+    text-align: center;
+    border-bottom: 1px solid #d6d6d6;
+    margin: 1em 0;
+    font-weight: 700; /* Bold text for emphasis */
+}
+
+.page-title {
+    font-size: 1.5em;
+    font-family: 'Exo 2';
+    color: #5A9BD5;
+    text-align: center;
+    font-weight: 600;
+    margin: 1em 0;
+}
