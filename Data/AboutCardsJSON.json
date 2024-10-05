@@ -1,0 +1,9 @@
+{
+    "aboutCards": [
+        {
+            "heading": "Tree1",
+            "description": "This is the Big Tree By the Library",
+            "imageURL": "./images/treeByLibrary.jpg"
+        }
+    ]
+}
