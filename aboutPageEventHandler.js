@@ -23,6 +23,7 @@ function loadCards(aboutCards){
         //     document.body.style.backgroundColor = colorAssociation;
         // });
         addAboutCard.classList.add("col", "card", "shadow-sm", "d-flex", "flex-row", "align-items-center", "nature-texture-background");
+        addAboutCard.style.backgroundPosition = randomBackgroundPosition(); // random frame of image to avoid repetative look
         if(i % 2 == 0){
             addAboutCard.innerHTML = `
                 <div class="p-2">
@@ -33,7 +34,6 @@ function loadCards(aboutCards){
                     <p class="card-text">${description}</p>
                 </div>
             `;
-            addAboutCard.style.backgroundPosition = randomBackgroundPosition();
         }else{
             addAboutCard.innerHTML = `
                 <div class="card-body">
@@ -41,13 +41,21 @@ function loadCards(aboutCards){
                     <p class="card-text">${description}</p>
                 </div>
                 <div class="p-2">
-                    <img src="${imageURL}" class="rounded-circle  picture-Border" alt="...">
+                    <img src="${imageURL}" class="rounded-circle  picture-Border" alt="tree">
                 </div>
             `;
         }
 
         divList.appendChild(addAboutCard);
     } // end of for
+}
+
+// Creates random background position, works in 0-100% which is why there is * 100 and  adds a % after the number
+// Percents work like this: origin, or start, 10% from the left of the image and 20% from the top of the image for example
+function randomBackgroundPosition(){
+    const randomX = Math.floor(Math.random() * 100);
+    const randomY = Math.floor(Math.random() * 100);
+    return `${randomX}% ${randomY}%`;
 }
 
 console.log("JS Loaded\n\n");

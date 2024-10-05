@@ -105,22 +105,22 @@ header {
 }
 
 .title-heading {
-    font-family: 'Exo 2', sans-serif; /* Replace with your chosen techy font */
-    font-size: 1em; /* Adjust size as needed */
-    color: #5A9BD5; /* Soft Blue color */
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    font-size: 1em;
     text-align: center;
     border-bottom: 1px solid #d6d6d6;
-    margin: 1em 0;
     font-weight: 700; /* Bold text for emphasis */
+    align-items: center;
+    justify-content: center;
 }
 
 .page-title {
     font-size:4em;
     font-family: 'Dancing Script', cursive;
     color: #228B22;
-    text-align: center;
+    align-items: center;
     font-weight: 600;
-    margin: 0.5em 0;
 }
 
 
@@ -130,17 +130,12 @@ header {
 
 /* Center the card container */
 .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
 .card {
-    width: 900px;
-    /* background-color: #228B22; */
+    width: 70vw;
     background-image: url('images/natureCardTexture.jpg');
-    background-repeat: no-repeat;
     border: 1px solid #ccc;
     border-radius: 20px;
     overflow: hidden;
@@ -152,11 +147,18 @@ header {
 }
 
 .card img {
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 25vw;
     object-fit: cover;
 }
 
 .picture-Border {
     border: 9px double darkgreen;
+}
+
+.logo {
+    width: calc(3vw + 25px);
+    height: calc(3vw + 25px);
+    border: 2px solid darkgreen;
+    margin-right: 10px;
 }
