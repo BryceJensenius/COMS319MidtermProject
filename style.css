@@ -122,3 +122,41 @@ header {
     font-weight: 600;
     margin: 0.5em 0;
 }
+
+
+
+
+/* About Cards */
+
+/* Center the card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 900px;
+    /* background-color: #228B22; */
+    background-image: url('images/natureCardTexture.jpg');
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 40px;
+}
+
+.card-body {
+    color: #000000;
+}
+
+.card img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.picture-Border {
+    border: 9px double darkgreen;
+}

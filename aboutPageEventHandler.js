@@ -9,7 +9,7 @@ function getAboutCards(){
 function loadCards(aboutCards){
     console.log("About Cards Loaded: \n" + aboutCards);
 
-    var divList = document.getElementById("col");
+    var divList = document.getElementById("row");
     divList.innerHTML = "";
 
     for (let i = 0; i < aboutCards.length; i++) {
@@ -22,15 +22,30 @@ function loadCards(aboutCards){
         // AddCardMovie.addEventListener("click", function (){
         //     document.body.style.backgroundColor = colorAssociation;
         // });
-        addAboutCard.classList.add("col"); // Add Bootstrap class to the column
-        addAboutCard.innerHTML = `
-        <div class="card shadow-sm">
-            <img src=${imageURL} class="card-img-top" alt="..."></img>
-            <div class="card-body" style="background-color: #228B22">
-            <p class="card-text"> <strong>${heading}</strong></br> ${description}</p>
-            </div>
-        </div>
-        `;
+        addAboutCard.classList.add("col", "card", "shadow-sm", "d-flex", "flex-row", "align-items-center", "nature-texture-background");
+        if(i % 2 == 0){
+            addAboutCard.innerHTML = `
+                <div class="p-2">
+                    <img src="${imageURL}" class="rounded-circle picture-Border" alt="tree">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">${heading}</h5>
+                    <p class="card-text">${description}</p>
+                </div>
+            `;
+            addAboutCard.style.backgroundPosition = randomBackgroundPosition();
+        }else{
+            addAboutCard.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${heading}</h5>
+                    <p class="card-text">${description}</p>
+                </div>
+                <div class="p-2">
+                    <img src="${imageURL}" class="rounded-circle  picture-Border" alt="...">
+                </div>
+            `;
+        }
+
         divList.appendChild(addAboutCard);
     } // end of for
 }
