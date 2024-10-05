@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 nav ul {
     list-style: none;
     display: flex;
@@ -113,10 +115,10 @@ header {
 }
 
 .page-title {
-    font-size: 1.5em;
-    font-family: 'Exo 2';
-    color: #5A9BD5;
+    font-size:4em;
+    font-family: 'Dancing Script', cursive;
+    color: #228B22;
     text-align: center;
     font-weight: 600;
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
