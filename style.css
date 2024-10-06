@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 
 nav ul {
     list-style: none;
@@ -16,7 +19,8 @@ nav a {
     text-decoration: none;
     font-family: Baskerville;
     color: #ffffff;
-    border: 5px double #413d3d;
+    border: 2px double #82b09d;
+    background-color: rgba(98, 181, 98, 0.633);
     padding: 10px;
     font-weight: 600;
     border-radius: 15px;
@@ -44,28 +48,32 @@ body {
 }
 
 footer {
-    background-color: #333;
+    text-align: center;
+    padding: 1px;
+    background-color: #228B22;
     color: #fff;
-    padding: 20px 0; /* Increased padding */
+}
+
+footer a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer a:hover {
+    color: rgba(233, 207, 207, 0.824);
+}
+ 
+header {
+    background-color: #228B22;
+    color: #fff;
+    padding: 20px 0;
     margin-bottom: 20px;
 }
 
-footer p {
-    text-decoration: none;
-    font-family: Baskerville;
-    color: #e0e0e0;
-    padding: 2px;
-    font-weight: 500;
-    border-radius: 20px;
-    margin: 0 auto;
-    text-align: center;
-}
-    
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0; /* Increased padding */
-    margin-bottom: 20px;
+header a:hover {
+    color: rgba(233, 207, 207, 0.824);
 }
 
 .contacts {
@@ -116,26 +124,29 @@ header {
 }
 
 .page-title {
-    font-size:4em;
+    font-size: calc(20px + 2.5vw);
     font-family: 'Dancing Script', cursive;
     color: #228B22;
     align-items: center;
     font-weight: 600;
 }
 
-
-
-
 /* About Cards */
-
 /* Center the card container */
 .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
-}
+  }
 
 .card {
     width: 70vw;
     background-image: url('images/natureCardTexture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border: 1px solid #ccc;
     border-radius: 20px;
     overflow: hidden;
@@ -144,12 +155,29 @@ header {
 
 .card-body {
     color: #000000;
+    background-color: rgba(220, 245, 220, 0.591);
+    border-radius: 10px;
+    border: 2.5px solid darkgreen;
+    margin: 10px;
 }
 
 .card img {
     width: 25vw;
     height: 25vw;
     object-fit: cover;
+}
+
+.card-title {
+    font-weight: 300;
+    font-size: 2vw;
+    color: rgb(74, 74, 74);
+    font-family: 'Pacifico', cursive;
+    border-bottom: 2px solid rgba(0, 130, 0, 0.817);
+}
+
+.card-text {
+    font-size: calc(1vw + 5px);
+    font-family: 'Times New Roman', Times, serif
 }
 
 .picture-Border {

@@ -1,13 +1,13 @@
 {
     "aboutCards": [
         {
-            "heading": "Tree1",
+            "heading": "Columbia Sycamore Tree",
             "description": "This is the Big Tree By the Library",
             "imageURL": "./images/treeByLibrary.jpg"
         },
         {
-            "heading": "Tree2",
-            "description": "This is the Big Tree By the Library",
+            "heading": "Columbia Sycamore Tree",
+            "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
             "imageURL": "./images/treeByLibrary.jpg"
         }
     ]
