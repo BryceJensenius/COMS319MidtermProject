@@ -58,5 +58,13 @@ function randomBackgroundPosition(){
     return `${randomX}% ${randomY}%`;
 }
 
+// Toggling Navbar
+const toggleButton = document.getElementById('toggleNav');
+const navItems = document.getElementById('navItems');
+
+toggleButton.addEventListener('click', () => {
+    navItems.classList.toggle('show');
+});
+
 console.log("JS Loaded\n\n");
 window.onload = getAboutCards;
