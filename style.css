@@ -12,7 +12,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 20px;
+    margin: 0 min(20px, 1vw);
 }
 
 nav a {
@@ -21,9 +21,10 @@ nav a {
     color: #ffffff;
     border: 2px double #82b09d;
     background-color: rgba(98, 181, 98, 0.633);
-    padding: 10px;
+    padding: min(10px, 1vw);
     font-weight: 600;
     border-radius: 15px;
+    font-size: min(20px, 4vw);
 }
 
 img {
@@ -43,7 +44,7 @@ body {
 .footer-element {
     text-decoration: none;
     font-family: Baskerville;
-    font-size: 13px;
+    font-size: min(13px, 1vw);
     color: #dcdcdc;
     border: 2px solid #8f8e8e;
     padding: 9px;
@@ -60,9 +61,9 @@ footer {
 
 footer a {
     color: #fff;
-    margin: 0 5px;
+    margin: 0 min(5px, 0.5vw);
     text-decoration: none;
-    font-size: 15px;
+    font-size: min(15px, 4vw);
 }
 
 footer a:hover {
