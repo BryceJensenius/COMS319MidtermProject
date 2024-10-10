@@ -168,7 +168,9 @@ header a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+
+    overflow: visible; /* Ensure overflow isn't hidden */
+    height: auto; /* Allow height to grow */
   }
 
 .card {
@@ -214,6 +216,7 @@ header a:hover {
     border: 9px double darkgreen;
 }
 
+/* Logo Stuff */
 .logo {
     width: calc(3vw + 25px);
     height: calc(3vw + 25px);
