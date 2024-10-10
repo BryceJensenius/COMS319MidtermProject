@@ -104,13 +104,24 @@ function randomBackgroundPosition(){
     return `${randomX}% ${randomY}%`;
 }
 
-// Toggling Navbar
+// Nav Bar : Only TOggle with smaller screens
 const toggleButton = document.getElementById('toggleNav');
 const navItems = document.getElementById('navItems');
+const headNavigation = document.getElementById('headNavElem');
+function handleNavVisibility() {
+    if (window.innerWidth > 800) {
+        navItems.classList.add('show');  // Always show nav items on larger screens
+        headNavigation.classList.add('justify-content-center');
+        toggleButton.style.display = 'none'; // Hide the toggle button
+    } else {
+        navItems.classList.toggle('displayInRows');
+        toggleButton.addEventListener('click', () => {
+            navItems.classList.toggle('show');
+        });
+    }
+}
 
-toggleButton.addEventListener('click', () => {
-    navItems.classList.toggle('show');
-});
+handleNavVisibility();
 
 console.log("JS Loaded\n\n");
 window.onload = getAboutCards;
