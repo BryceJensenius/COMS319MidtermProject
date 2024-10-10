@@ -16,6 +16,7 @@ function loadCards(aboutCards){
         let heading = aboutCards[i].heading;
         let description = aboutCards[i].description;
         let imageURL = aboutCards[i].imageURL;
+        let imageAlt = aboutCards[i].alt;
         // construct the HTML element
         let addAboutCard = document.createElement("div");
 
@@ -27,7 +28,7 @@ function loadCards(aboutCards){
         if(i % 2 == 0){
             addAboutCard.innerHTML = `
                 <div class="p-2">
-                    <img src="${imageURL}" class="rounded-circle picture-Border" alt="tree">
+                    <img src="${imageURL}" class="rounded-circle picture-Border" alt="${imageAlt}">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">${heading}</h5>

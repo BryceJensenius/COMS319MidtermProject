@@ -3,22 +3,26 @@
         {
             "heading": "Columbia Sycamore Tree",
             "description": "This is the Big Tree By the Library",
-            "imageURL": "./images/treeByLibrary.jpg"
+            "imageURL": "./images/treeByLibrary.jpg",
+            "alt": "Tree1"
         },
         {
             "heading": "Tree Towards Center Campus",
             "description": "This is a tree By Center campus to the north just past the sidewalk.",
-            "imageURL": "./images/centerCampusTree.jpg"
+            "imageURL": "./images/centerCampusTree.jpg",
+            "alt": "Tree2"
         },
         {
             "heading": "Columbia Sycamore Tree 3",
             "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
-            "imageURL": "./images/treeByLibrary.jpg"
+            "imageURL": "./images/treeByLibrary.jpg",
+            "alt": "Tree3"
         },
         {
             "heading": "Columbia Sycamore Tree 4",
             "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
-            "imageURL": "./images/treeByLibrary.jpg"
+            "imageURL": "./images/treeByLibrary.jpg",
+            "alt": "Tree4"
         }
     ]
 }
