@@ -203,6 +203,7 @@ header a:hover {
     border-radius: 10px;
     border: 2.5px solid darkgreen;
     margin: 10px;
+    margin-bottom: 20px;
 }
 
 .card img {
@@ -231,27 +232,36 @@ header a:hover {
 /* Card Reviews */
 .leave-review-left {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: #28a745;
+    bottom: min(20px, 1.5vw);
+    left: min(20px, 1.5vw);
+    background-color: #228B22;
     color: #fff;
-    padding: 10px 20px;
+    padding: 1vw 1vw;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 10px;
+    width: min(100px + 2.5vw, 10vw);
+    height: min(50px + 0.9vw, 3vw);
+    font-size: min(10px + 0.3vw, 1vw);
+
+    justify-content: center;
 }
 
 /* Card Reviews */
 .leave-review-right {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: #28a745;
+    bottom: min(20px, 1.5vw);
+    right: min(20px, 1.5vw);
+    background-color: #228B22;
     color: #fff;
-    padding: 10px 20px;
+    padding: 1vw 1vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    width: min(100px + 2.5vw, 10vw);
+    height: min(50px + 0.9vw, 3vw);
+    font-size: min(10px + 0.3vw, 1vw);
+
+    justify-content: center;
 }
 
 .leave-review:hover {
@@ -268,6 +278,7 @@ header a:hover {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: calc(7px + 0.5vw);
 }
 
 .submit-review {
@@ -277,7 +288,9 @@ header a:hover {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 5px;
+    width: min(100px + 2.5vw, 15vw);
+    height: max(20px + 0.5vw, 2.2vw);
+    font-size: min(10px + 0.3vw, 1.2vw);
 }
 
 .submit-review:hover {
@@ -292,6 +305,11 @@ header a:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
+
+    cursor: pointer;
+    width: min(100px + 2.5vw, 15vw);
+    height: max(20px + 0.5vw, 2.2vw);
+    font-size: min(10px + 0.3vw, 1.2vw);
 }
 
 .cancel-review:hover {
