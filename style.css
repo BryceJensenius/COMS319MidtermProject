@@ -37,7 +37,7 @@ nav a {
     padding: min(10px, 1vw);
     font-weight: 600;
     border-radius: 15px;
-    font-size: min(20px, 4vw);
+    font-size: min(20px, 3.5vw);
 }
 
 .currentPageIcon {
@@ -112,8 +112,6 @@ footer a:hover {
 header {
     background-color: #228B22;
     color: #fff;
-    padding: 20px 0;
-    margin-bottom: 20px;
 }
 
 header a:hover {
@@ -338,8 +336,8 @@ header a:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 300px;
-    font-size: 16px;
+    width: min(300px, 40vw);
+    font-size: min(16px, 3vw);
 }
 
 .search-button {
@@ -348,7 +346,7 @@ header a:hover {
     border-radius: 5px;
     background-color: #5BA95B;
     color: white;
-    font-size: 16px;
+    font-size: min(16px, 3vw);
     cursor: pointer;
     margin-left: 5px;
 }
