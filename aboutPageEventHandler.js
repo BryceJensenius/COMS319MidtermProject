@@ -32,6 +32,12 @@ function loadCards(aboutCards){
                 <div class="card-body">
                     <h5 class="card-title">${heading}</h5>
                     <p class="card-text">${description}</p>
+                    <button class="leave-review leave-review-right">Leave Review</button>
+                    <div class="review-form" style="display: none; margin-top: 10px;">
+                        <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
+                        <button class="submit-review">Submit Review</button>
+                        <button class="cancel-review">Cancel</button>
+                    </div>
                 </div>
             `;
         }else{
@@ -39,6 +45,12 @@ function loadCards(aboutCards){
                 <div class="card-body">
                     <h5 class="card-title">${heading}</h5>
                     <p class="card-text">${description}</p>
+                    <button class="leave-review-left leave-review">Leave Review</button>
+                    <div class="review-form" style="display: none; margin-top: 10px;">
+                        <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
+                        <button class="submit-review">Submit Review</button>
+                        <button class="cancel-review">Cancel</button>
+                    </div>
                 </div>
                 <div class="p-2">
                     <img src="${imageURL}" class="rounded-circle  picture-Border" alt="tree">
@@ -47,7 +59,40 @@ function loadCards(aboutCards){
         }
 
         divList.appendChild(addAboutCard);
-    } // end of for
+
+        // Event listener for when the leave review button is clicked
+        const leaveReviewBtn = addAboutCard.querySelector('.leave-review-right') || addAboutCard.querySelector('.leave-review-left'); // Get The Button
+        leaveReviewBtn.addEventListener('click', function() {
+            leaveReviewBtn.style.display = 'none'; // Hitting leave review makes leave review button no longer visible
+            const reviewForm = addAboutCard.querySelector('.review-form'); // Get The Review form for this specific card
+            reviewForm.style.display = reviewForm.style.display === 'none' ? 'block' : 'none'; // Toggle the review form, enable or disable
+        });
+
+        // Event listener for the button that submits this reviwe
+        const submitReviewBtn = addAboutCard.querySelector('.submit-review'); // Get the Submit review button from within the form of the card
+        if (submitReviewBtn) {
+            submitReviewBtn.addEventListener('click', function() {
+                leaveReviewBtn.style.display = 'block'; // Now the review button should come back
+                const reviewText = addAboutCard.querySelector('.review-text').value; // Get the Text from the review form
+                // Reset the Review Form
+                addAboutCard.querySelector('.review-text').value = '';
+                addAboutCard.querySelector('.review-form').style.display = 'none';
+
+                if(reviewText == ""){
+                    alert("Cannot Leave Empty Review!");
+                    return;
+                }
+                console.log('Review submitted:', reviewText); // Log the review
+
+                // Save to a JSON file, I haven't made it here yet
+            });
+        }
+        const cancelReviewButton = addAboutCard.querySelector('.cancel-review');
+        cancelReviewButton.addEventListener('click', function() {
+            leaveReviewBtn.style.display = 'block';
+            addAboutCard.querySelector('.review-form').style.display = 'none';
+        });
+    }
 }
 
 // Creates random background position, works in 0-100% which is why there is * 100 and  adds a % after the number

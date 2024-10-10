@@ -182,9 +182,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    overflow: visible; /* Ensure overflow isn't hidden */
-    height: auto; /* Allow height to grow */
+    height: auto; /* Fixed issue where cards were going over header and footer */
   }
 
 .card {
@@ -229,6 +227,77 @@ header a:hover {
 .picture-Border {
     border: 9px double darkgreen;
 }
+
+/* Card Reviews */
+.leave-review-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Card Reviews */
+.leave-review-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.leave-review:hover {
+    background-color: #218838;
+}
+
+/* Reviews */
+.review-form {
+    margin-top: 10px;
+}
+
+.review-text {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-review {
+    background-color: #5BA95B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.submit-review:hover {
+    background-color: #478747;
+}
+
+.cancel-review {
+    background-color: rgb(204, 21, 21);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.cancel-review:hover {
+    background-color: #874747;
+}
+
 
 /* Logo Stuff */
 .logo {
