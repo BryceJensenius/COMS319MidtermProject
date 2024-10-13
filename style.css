@@ -378,3 +378,33 @@ header a:hover {
 .search-button:hover {
     background-color: #478747;
 }
+label{
+    font-size: min(18px, 3vw);
+    font-family: Baskerville;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary{
+    background-color: #478747;
+    margin-left: 10px;
+}
+.form-group{
+    width: 60vw;
+    padding: 10px 15px;
+}
+.involved-container{
+    width: 70vw;
+    background-image: url('images/natureCardTexture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
