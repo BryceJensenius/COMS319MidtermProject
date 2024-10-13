@@ -33,11 +33,18 @@ function loadCards(aboutCards){
                 <div class="card-body">
                     <h5 class="card-title">${heading}</h5>
                     <p class="card-text">${description}</p>
-                    <button class="leave-review leave-review-right">Leave Review</button>
                     <div class="review-form" style="display: none; margin-top: 10px;">
                         <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
                         <button class="submit-review">Submit Review</button>
                         <button class="cancel-review">Cancel</button>
+                    </div>
+                    <div class="leave-review-right" style="display: flex;">
+                        <button class="leave-review"  id="more-info">More Info</button>
+                        <button class="leave-review" id="leave-review">Leave Review</button>
+                    </div>
+                    <!-- Modal Structure -->
+                    <div id="infoModal">
+
                     </div>
                 </div>
             `;
@@ -46,11 +53,14 @@ function loadCards(aboutCards){
                 <div class="card-body">
                     <h5 class="card-title">${heading}</h5>
                     <p class="card-text">${description}</p>
-                    <button class="leave-review-left leave-review">Leave Review</button>
                     <div class="review-form" style="display: none; margin-top: 10px;">
                         <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
                         <button class="submit-review">Submit Review</button>
                         <button class="cancel-review">Cancel</button>
+                    </div>
+                    <div class="leave-review-left" style="display: flex;">
+                        <button class="leave-review" id="more-info">More Info</button>
+                        <button class="leave-review" id="leave-review">Leave Review</button>
                     </div>
                 </div>
                 <div class="p-2">
@@ -62,18 +72,27 @@ function loadCards(aboutCards){
         divList.appendChild(addAboutCard);
 
         // Event listener for when the leave review button is clicked
-        const leaveReviewBtn = addAboutCard.querySelector('.leave-review-right') || addAboutCard.querySelector('.leave-review-left'); // Get The Button
+        const leaveReviewBtn = addAboutCard.querySelector('#leave-review'); // Get The Button
+        const moreInfoBtn = addAboutCard.querySelector('#more-info'); // Get The Button
         leaveReviewBtn.addEventListener('click', function() {
             leaveReviewBtn.style.display = 'none'; // Hitting leave review makes leave review button no longer visible
+            moreInfoBtn.style.display = 'none';
             const reviewForm = addAboutCard.querySelector('.review-form'); // Get The Review form for this specific card
             reviewForm.style.display = reviewForm.style.display === 'none' ? 'block' : 'none'; // Toggle the review form, enable or disable
         });
+        const reviewTextArea = addAboutCard.querySelector("#infoModal");
+        reviewTextArea.style.display = 'none';
+        moreInfoBtn.addEventListener('click', function() {
+            reviewTextArea.style.display = 'block';
+            reviewTextArea.textContent = "Hello This worked";
+        })
 
         // Event listener for the button that submits this reviwe
         const submitReviewBtn = addAboutCard.querySelector('.submit-review'); // Get the Submit review button from within the form of the card
         if (submitReviewBtn) {
             submitReviewBtn.addEventListener('click', function() {
                 leaveReviewBtn.style.display = 'block'; // Now the review button should come back
+                moreInfoBtn.style.display = 'block';
                 const reviewText = addAboutCard.querySelector('.review-text').value; // Get the Text from the review form
                 // Reset the Review Form
                 addAboutCard.querySelector('.review-text').value = '';
@@ -91,6 +110,7 @@ function loadCards(aboutCards){
         const cancelReviewButton = addAboutCard.querySelector('.cancel-review');
         cancelReviewButton.addEventListener('click', function() {
             leaveReviewBtn.style.display = 'block';
+            moreInfoBtn.style.display = 'block';
             addAboutCard.querySelector('.review-form').style.display = 'none';
         });
     }

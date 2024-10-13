@@ -201,7 +201,7 @@ header a:hover {
     border-radius: 10px;
     border: 2.5px solid darkgreen;
     margin: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .card img {
@@ -227,18 +227,30 @@ header a:hover {
     border: 9px double darkgreen;
 }
 
-/* Card Reviews */
-.leave-review-left {
-    position: absolute;
-    bottom: min(20px, 1.5vw);
-    left: min(20px, 1.5vw);
+.leave-review {
     background-color: #228B22;
     color: #fff;
+    padding: 1vw;
+    padding-bottom: 2vw;
+    border: none;
+    border-radius: 10px;
+    width: min(120px + 2.5vw, 10vw);
+    height: min(10px, 1vw);
+    font-size: min(10px + 0.3vw, 1vw);
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Card Reviews */
+.leave-review-left {
+    bottom: min(40px + 1.8vw, 5vw);
+    left: min(0px, 0vw);
+    position: absolute;
     padding: 1vw 1vw;
     border: none;
     border-radius: 10px;
-    width: min(100px + 2.5vw, 10vw);
-    height: min(50px + 0.9vw, 3vw);
+    cursor: pointer;
+    height: min(1px + 0.9vw, 2vw);
     font-size: min(10px + 0.3vw, 1vw);
 
     justify-content: center;
@@ -246,17 +258,14 @@ header a:hover {
 
 /* Card Reviews */
 .leave-review-right {
+    bottom: min(40px + 1.8vw, 5vw);
+    right: min(0px, 0vw);
     position: absolute;
-    bottom: min(20px, 1.5vw);
-    right: min(20px, 1.5vw);
-    background-color: #228B22;
-    color: #fff;
     padding: 1vw 1vw;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: min(100px + 2.5vw, 10vw);
-    height: min(50px + 0.9vw, 3vw);
+    height: min(40px + 0.9vw, 2vw);
     font-size: min(10px + 0.3vw, 1vw);
 
     justify-content: center;
@@ -283,10 +292,9 @@ header a:hover {
     background-color: #5BA95B;
     color: white;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    width: min(100px + 2.5vw, 15vw);
+    width: min(100px + 2.5vw, 14vw);
     height: max(20px + 0.5vw, 2.2vw);
     font-size: min(10px + 0.3vw, 1.2vw);
 }
@@ -299,13 +307,12 @@ header a:hover {
     background-color: rgb(204, 21, 21);
     color: white;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
 
     cursor: pointer;
-    width: min(100px + 2.5vw, 15vw);
+    width: min(70px + 2.5vw, 9vw);
     height: max(20px + 0.5vw, 2.2vw);
     font-size: min(10px + 0.3vw, 1.2vw);
 }

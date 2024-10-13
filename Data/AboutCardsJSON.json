@@ -2,7 +2,7 @@
     "aboutCards": [
         {
             "heading": "Columbia Sycamore Tree",
-            "description": "This is the Big Tree By the Library",
+            "description": "This is the Big Tree By the library",
             "imageURL": "./images/treeByLibrary.jpg",
             "alt": "Tree1"
         },
