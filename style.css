@@ -378,3 +378,18 @@ header a:hover {
 .search-button:hover {
     background-color: #478747;
 }
+label{
+    font-size: min(18px, 3vw);
+    font-family: Baskerville;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary{
+    background-color: #478747;
+    margin-left: 10px;
+}
+.form-group{
+    padding: 10px 15px;
+}
