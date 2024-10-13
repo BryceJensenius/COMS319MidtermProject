@@ -23,6 +23,12 @@
             "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
             "imageURL": "./images/treeByLibrary.jpg",
             "alt": "Tree4"
+        },
+        {
+            "heading": "Tree near Gilman",
+            "description": "This welcoming tree is located near Gilman, with plenty of low hanging branches for accessible climbing",
+            "imageURL": "./images/personClimbingTreeGilman.jpg",
+            "alt": "Tree5"
         }
     ]
 }
