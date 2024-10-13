@@ -1,0 +1,12 @@
+{
+    "reviews": [
+        {
+            "description": "I would highly recommend visiting this location with your friends. Great place to relax.",
+            "rating": 10
+        },
+        {
+            "description": "That is a pretty good spot to climb.",
+            "rating": 9
+        }
+    ]
+}

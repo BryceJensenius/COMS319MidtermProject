@@ -181,7 +181,22 @@ header a:hover {
     align-items: center;
     flex-direction: column;
     height: auto; /* Fixed issue where cards were going over header and footer */
-  }
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+/* Container for a locations reviews */
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
 
 .card {
     width: 70vw;
@@ -202,6 +217,8 @@ header a:hover {
     border: 2.5px solid darkgreen;
     margin: 10px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card img {

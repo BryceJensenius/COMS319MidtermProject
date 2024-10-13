@@ -5,6 +5,44 @@ function getAboutCards(){
     .catch(err => console.log("Error :"+err));
 }
 
+// The file containing the information for this tree is heading.json
+// loads the data and puts it under the inputted cardElement as childs
+function getCardReviews(cardElement, heading){
+    console.log(heading);
+    fetch(`./Data/${heading}.json`)
+    .then(response => response.json())
+    .then(aboutCards => loadReviewsForElement(cardElement, aboutCards.reviews))
+    .catch(err => console.log("Error :"+err));
+}
+
+function loadReviewsForElement(cardElement, reviews) {
+    cardElement.innerHTML = ''; // Remove what is present to repopulate list
+    for (let i = 0; i < reviews.length; i++) {
+        let description = reviews[i].description;
+        let rating = reviews[i].rating;
+        // construct the HTML element
+        let addCardReview = document.createElement("div");
+
+        // AddCardMovie.addEventListener("click", function (){
+        //     document.body.style.backgroundColor = colorAssociation;
+        // });
+        addCardReview.innerHTML = `
+            <div class="review-container">
+                <div class="card-body">
+                    <h5 class="card-title">Student Review</h5>
+                    <p class="card-text">${description}</p>
+                    <p class="card-text">Rating: ${rating}</p>
+                </div>
+            </div>
+        `;
+
+        if(i == reviews.length - 1){
+            addCardReview.style.marginBottom = '100px';
+        }
+        cardElement.appendChild(addCardReview);
+    }
+}
+
 
 function loadCards(aboutCards){
     console.log("About Cards Loaded: \n" + aboutCards);
@@ -27,45 +65,55 @@ function loadCards(aboutCards){
         addAboutCard.style.backgroundPosition = randomBackgroundPosition(); // random frame of image to avoid repetative look
         if(i % 2 == 0){
             addAboutCard.innerHTML = `
-                <div class="p-2">
-                    <img src="${imageURL}" class="rounded-circle picture-Border" alt="${imageAlt}">
+            <div>
+                <div class="card-container">
+                    <div class="p-2">
+                        <img src="${imageURL}" class="rounded-circle picture-Border" alt="${imageAlt}">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">${heading}</h5>
+                        <p class="card-text">${description}</p>
+                        <div class="review-form" style="display: none; margin-top: 10px;">
+                            <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
+                            <button class="submit-review">Submit Review</button>
+                            <button class="cancel-review">Cancel</button>
+                        </div>
+                        <div class="leave-review-right" style="display: flex;">
+                            <button class="leave-review" id="more-info">More Info</button>
+                            <button class="leave-review" id="leave-review">Leave Review</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">${heading}</h5>
-                    <p class="card-text">${description}</p>
-                    <div class="review-form" style="display: none; margin-top: 10px;">
-                        <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
-                        <button class="submit-review">Submit Review</button>
-                        <button class="cancel-review">Cancel</button>
-                    </div>
-                    <div class="leave-review-right" style="display: flex;">
-                        <button class="leave-review"  id="more-info">More Info</button>
-                        <button class="leave-review" id="leave-review">Leave Review</button>
-                    </div>
-                    <!-- Modal Structure -->
-                    <div id="infoModal">
+                <div id="infoModal">
 
-                    </div>
                 </div>
+            </div>
             `;
         }else{
             addAboutCard.innerHTML = `
-                <div class="card-body">
-                    <h5 class="card-title">${heading}</h5>
-                    <p class="card-text">${description}</p>
-                    <div class="review-form" style="display: none; margin-top: 10px;">
-                        <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
-                        <button class="submit-review">Submit Review</button>
-                        <button class="cancel-review">Cancel</button>
+            <div>
+                <div class="card-container">
+                    <div class="card-body">
+                        <h5 class="card-title">${heading}</h5>
+                        <p class="card-text">${description}</p>
+                        <div class="review-form" style="display: none; margin-top: 10px;">
+                            <textarea class="review-text" rows="3" placeholder="Write your review..."></textarea>
+                            <button class="submit-review">Submit Review</button>
+                            <button class="cancel-review">Cancel</button>
+                        </div>
+                        <div class="leave-review-left" style="display: flex;">
+                            <button class="leave-review" id="more-info">More Info</button>
+                            <button class="leave-review" id="leave-review">Leave Review</button>
+                        </div>
                     </div>
-                    <div class="leave-review-left" style="display: flex;">
-                        <button class="leave-review" id="more-info">More Info</button>
-                        <button class="leave-review" id="leave-review">Leave Review</button>
+                    <div class="p-2">
+                        <img src="${imageURL}" class="rounded-circle  picture-Border" alt="tree">
                     </div>
                 </div>
-                <div class="p-2">
-                    <img src="${imageURL}" class="rounded-circle  picture-Border" alt="tree">
+                <div id="infoModal">
+
                 </div>
+            </div>
             `;
         }
 
@@ -77,14 +125,20 @@ function loadCards(aboutCards){
         leaveReviewBtn.addEventListener('click', function() {
             leaveReviewBtn.style.display = 'none'; // Hitting leave review makes leave review button no longer visible
             moreInfoBtn.style.display = 'none';
+            reviewTextArea.style.display = 'none';
             const reviewForm = addAboutCard.querySelector('.review-form'); // Get The Review form for this specific card
             reviewForm.style.display = reviewForm.style.display === 'none' ? 'block' : 'none'; // Toggle the review form, enable or disable
         });
+
         const reviewTextArea = addAboutCard.querySelector("#infoModal");
         reviewTextArea.style.display = 'none';
         moreInfoBtn.addEventListener('click', function() {
-            reviewTextArea.style.display = 'block';
-            reviewTextArea.textContent = "Hello This worked";
+            if(reviewTextArea.style.display == 'none'){
+                reviewTextArea.style.display = 'block';
+                getCardReviews(reviewTextArea, heading);
+            }else{
+                reviewTextArea.style.display = 'none';
+            }
         })
 
         // Event listener for the button that submits this reviwe
