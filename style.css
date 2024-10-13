@@ -409,3 +409,26 @@ label{
     display: flex;
     flex-direction: column;
 }
+.form-comments{
+    width: 57vw;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+}
+.question-container{
+    width: 60vw;
+    background-image: url('images/natureCardTexture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
