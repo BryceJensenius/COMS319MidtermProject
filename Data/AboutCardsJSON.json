@@ -13,16 +13,22 @@
             "alt": "Tree2"
         },
         {
-            "heading": "Columbia Sycamore Tree 3",
-            "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
-            "imageURL": "./images/treeByLibrary.jpg",
+            "heading": "Densely branched tree behind Coover",
+            "description": "This tree is located behind Coover Hall. It's in a prime location for a post-TLA study session climb!",
+            "imageURL": "./images/CooverTree.jpg",
             "alt": "Tree3"
         },
         {
-            "heading": "Columbia Sycamore Tree 4",
-            "description": "This is the Big Tree By the Library. With Longer Text to test what happens when there is a lot to put on the card.",
-            "imageURL": "./images/treeByLibrary.jpg",
+            "heading": "Tree next to Sukup Sign",
+            "description": "This tree is located next to the Sukup Hall and Atrium sign.",
+            "imageURL": "./images/SukupTree.jpg",
             "alt": "Tree4"
+        },
+        {
+            "heading": "Tree near Gilman",
+            "description": "This welcoming tree is located near Gilman, with plenty of low hanging branches for accessible climbing",
+            "imageURL": "./images/personClimbingTreeGilman.jpg",
+            "alt": "Tree5"
         }
     ]
 }
