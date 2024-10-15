@@ -29,6 +29,41 @@
             "description": "This welcoming tree is located near Gilman, with plenty of low hanging branches for accessible climbing",
             "imageURL": "./images/personClimbingTreeGilman.jpg",
             "alt": "Tree5"
+        },
+        {
+            "heading": "Baseball court In Brookside Park",
+            "description": "This is a challenging climb because the bigger branches that can be used all tower vertically. It is very fun to manuver between them however. Once you get towards the top, there are good places to sit in the branches.",
+            "imageURL": "./images/treeByBrooksidePark.JPEG",
+            "alt": "Brookside Park Tree"
+        },
+        {
+            "heading": "North Hiking Trail in Brookside Park",
+            "description": "Very tall tree in the forest hiking and biking trails north of Brookside Park. Not for climbing but great to walk by.",
+            "imageURL": "./images/northTrailBrooksidePark.JPEG",
+            "alt": "North Brookside Park Hiking Trail"
+        },
+        {
+            "heading": "Amazing Climb Near Skatepark",
+            "description": "Highly Recommended climb. Found in the forest hiking trail south of the Georgie Tsushima Memorial Skate Park.",
+            "imageURL": "./images/southOfSkatepark.JPEG",
+            "alt": "Tall Tree with Ladder"
+        },
+        {
+            "heading": "Giant Tree on North Brookside Park Biking Path",
+            "description": "Find this giant tree on the paved biking and wallking trail on the north east side of brookside park. Towering over the left side of the trail.",
+            "imageURL": "./images/northBrooksideParkbikingPath.JPEG"
+        },
+        {
+            "heading": "Nice Tree North of Bessey Hall",
+            "description": "Find this tree on the north side of Bessey Hall. Will be difficult to climb but can meet under.",
+            "imageURL": "./images/northOfBesseyHall.JPEG",
+            "alt": "Medium Size Medium Branch Height"
+        },
+        {
+            "heading": "NorthWest Lawn of Logamarcino Lawn",
+            "description": "Easy to climb in the north west lawn of the logamarcino building on campus. Very public location.",
+            "imageURL": "./images/logamarcinoLawn.JPEG",
+            "alt": "Wide Tree"
         }
     ]
 }
