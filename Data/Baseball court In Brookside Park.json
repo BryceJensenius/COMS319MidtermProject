@@ -1,0 +1,16 @@
+{
+    "reviews": [
+        {
+            "description": "This is really good for moderate skilled climbers. The trees are tall and skinny so you have to practically jum between them, feels cool",
+            "rating": 9
+        },
+        {
+            "description": "Hard to get accross branches but I had fun.",
+            "rating": 7
+        },
+        {
+            "description": "Amazing colors in fall, really good area.",
+            "rating": 9
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "reviews": [
+        {
+            "description": "One of my favorite types of trees. Very tall and long branches, cool white color bark at the top",
+            "rating": 10
+        },
+        {
+            "description": "Ladder going up the tree is so cool!",
+            "rating": 10
+        },
+        {
+            "description": "Planks used as a ladder are rotten. Was playing for my life just trying to get down.",
+            "rating": 2
+        }
+    ]
+}
