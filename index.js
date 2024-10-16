@@ -1,0 +1,1 @@
+/*This file will be used to load and handle functionality on the first page*/
