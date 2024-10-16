@@ -1,5 +1,5 @@
 function getAboutCards(){
-    fetch("./Data/data.json")
+    fetch("data.json")
     .then(response => response.json())
     .then(aboutCards => loadCards(aboutCards.aboutCards))
     .catch(err => console.log("Error :"+err));
