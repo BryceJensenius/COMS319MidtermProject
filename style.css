@@ -314,7 +314,7 @@ header a:hover {
 }
 
 .leave-review:hover {
-    background-color: #218838;
+    background-color: #28a042;
 }
 
 /* Reviews */
@@ -395,9 +395,10 @@ header a:hover {
     border-radius: 5px;
     background-color: #5BA95B;
     color: white;
-    font-size: min(16px, 3vw);
+    font-size: min(16px, 2vw);
     cursor: pointer;
     margin-left: 5px;
+    width: 15vw;
 }
 
 .search-button:hover {
@@ -462,7 +463,7 @@ label{
 .verticalPageDivider {
     background-color: rgba(111, 199, 111, 0.85);
     width: 70vw;
-    height: max(120vh, 1200px);
+    height: max(160vh, 1200px);
     margin: 0 auto;
     margin-top: -15px;
     text-align: center;

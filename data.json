@@ -51,7 +51,8 @@
         {
             "heading": "Giant Tree on North Brookside Park Biking Path",
             "description": "Find this giant tree on the paved biking and wallking trail on the north east side of brookside park. Towering over the left side of the trail.",
-            "imageURL": "./images/northBrooksideParkbikingPath.JPEG"
+            "imageURL": "./images/northBrooksideParkbikingPath.JPEG",
+            "alt": "Tall Tree by brookside"
         },
         {
             "heading": "Nice Tree North of Bessey Hall",

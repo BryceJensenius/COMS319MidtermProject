@@ -46,7 +46,8 @@ function loadReviewsForElement(cardElement, reviews) {
 
 function loadCards(aboutCards){
     console.log("About Cards Loaded: \n" + aboutCards);
-
+    // Filter elements
+    aboutCards = filterCards(aboutCards);
     var divList = document.getElementById("row");
     divList.innerHTML = "";
 
@@ -55,6 +56,7 @@ function loadCards(aboutCards){
         let description = aboutCards[i].description;
         let imageURL = aboutCards[i].imageURL;
         let imageAlt = aboutCards[i].alt;
+
         // construct the HTML element
         let addAboutCard = document.createElement("div");
 
@@ -178,5 +180,49 @@ function randomBackgroundPosition(){
     return `${randomX}% ${randomY}%`;
 }
 
+// Filter cards based on current filter variables
+function filterCards(cards){
+
+    for (let i = cards.length - 1; i >= 0; i--) {
+        let card = cards[i];
+        if (!card || !card.heading || !card.description || !card.alt) {
+            console.error("Card or properties are undefined at index " + i);
+            continue; // Skip this iteration if card or its properties are undefined
+        }
+
+        let heading = card.heading.toLowerCase();
+        let description = card.description.toLowerCase();
+        let imageAlt = card.alt.toLowerCase();
+
+        // If the search filter is not found in any, remove the element
+        if(!(heading.includes(filters.searchFilter)
+            || description.includes(filters.searchFilter)
+            || imageAlt.includes(filters.searchFilter))){
+                cards.splice(i,1); // remove the element
+        }else{
+            console.log(heading + "\n\n\n");
+            console.log(description + "\n\n\n");
+            console.log(imageAlt + "\n\n\n");
+        }
+
+    }
+    return cards;
+}
+
+function addFilterEventHandlers(){
+    const searchInput = document.getElementById("searchBar");
+    const searchButton = document.getElementById("searchButton");
+
+    // Get the search filter
+    searchButton.addEventListener('click', () => {
+        filters.searchFilter = searchInput.value.toLowerCase(); // Set the search filter
+        getAboutCards();
+    })
+}
+
+let filters = {
+    "searchFilter": ""
+}
+addFilterEventHandlers();
 console.log("JS Loaded\n\n");
 window.onload = getAboutCards;
