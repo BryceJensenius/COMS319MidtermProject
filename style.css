@@ -503,3 +503,29 @@ label{
     border-radius: 5px;
     padding: 10px;
 }
+.carousel-caption{
+    bottom: 20px;
+    text-decoration: none;
+    font-family: Baskerville;
+    color: #ffffff;
+    border: 2px double #82b09d;
+    background-color: rgba(98, 181, 98, 0.633);
+    padding: min(10px, 1vw);
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: min(20px, 3.5vw);
+}
+.carousel-inner img{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 600px;
+    align-items: center;
+    border: 3px solid #284f13d1; /* 3px wide, solid style, with a color */
+    border-radius: 15px; 
+}
+.car-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}

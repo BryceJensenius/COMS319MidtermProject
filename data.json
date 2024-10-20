@@ -66,5 +66,31 @@
             "imageURL": "./images/logamarcinoLawn.JPEG",
             "alt": "Wide Tree"
         }
+    ],
+    "slideCards": [
+        {
+            "heading": "Club Events:",
+            "description": "Join us on October 31st for our Haunted Heights Tree Climb",
+            "imageURL": "./images/spookyTree.jpg",
+            "alt": "Fall trees"
+        },
+        {
+            "heading": "Who are we?",
+            "description": "ISU students who share a love for climbing and getting outdoors!",
+            "imageURL": "./images/southOfSkatepark.JPEG",
+            "alt": "Wide Tree"
+        },
+        {
+            "heading": "Leadership",
+            "description": "We are currently looking for a social media outreach specialist, contact us for more information!",
+            "imageURL": "./images/centralCampusBackground.jpg",
+            "alt": "Wide Tree"
+        },
+        {
+            "heading": "All are Welcome:",
+            "description": "Start climbing and reviewing now!",
+            "imageURL": "./images/northBrooksideParkbikingPath.JPEG",
+            "alt": "Wide Tree"
+        }
     ]
 }
