@@ -8,7 +8,6 @@ function getAboutCards(){
 // The file containing the information for this tree is heading.json
 // loads the data and puts it under the inputted cardElement as childs
 function getCardReviews(cardElement, heading){
-    console.log(heading);
     fetch(`./Data/${heading}.json`)
     .then(response => response.json())
     .then(aboutCards => loadReviewsForElement(cardElement, aboutCards.reviews))
@@ -199,10 +198,6 @@ function filterCards(cards){
             || description.includes(filters.searchFilter)
             || imageAlt.includes(filters.searchFilter))){
                 cards.splice(i,1); // remove the element
-        }else{
-            console.log(heading + "\n\n\n");
-            console.log(description + "\n\n\n");
-            console.log(imageAlt + "\n\n\n");
         }
 
     }

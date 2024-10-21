@@ -9,7 +9,7 @@ function loadCarousel() {
                 const isActive = index === 0 ? 'active' : ''; // Set the first item as active
                 const carouselItem = `
                     <div class="carousel-item ${isActive}">
-                        <img src="${slideCards.imageURL}" class="d-block w-100" alt="${slideCards.alt}">
+                        <img src="${slideCards.imageURL}" class="d-block w-100" style="object-fit: cover" alt="${slideCards.alt}">
                         <div class="carousel-caption">
                             <h5>${slideCards.heading}</h5>
                             <p>${slideCards.description}</p>
